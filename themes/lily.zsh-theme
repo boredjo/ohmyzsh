@@ -8,10 +8,12 @@ if [[ $terminfo[colors] -ge 256 ]]; then
     purple="%F{135}"
     hotpink="%F{161}"
     limegreen="%F{118}"
+    rootuser="%F{196}"
 else
     sytemgray="%F{gray}"
+    rootuser="%F{red}"
     usercolor="%F{green}"
-    systemcolor="%F{red}"
+    systemcolor="%F{blue}"
     pathcolor="%F{white}"
     orange="%F{yellow}"
     purple="%F{magenta}"
@@ -30,5 +32,5 @@ ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[blue]%} ➦"
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[magenta]%} ✂"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[grey]%} ✱"
 
-PS1='%{$usercolor%}%n%{$systemgray%}@%{$systemcolor%}%m%{$systemgray%}:%{$pathcolor%}%~ %{$reset_color%}$(git_prompt_info)'
+PS1='{%(#~{$rootcolor%}~{$usercolor%}%)%}%n%{$systemgray%}@%{$systemcolor%}%m%{$systemgray%}:%{$pathcolor%}%~ %{$reset_color%}$(git_prompt_info)'
 RPROMPT=' %{$systemgray%}[%T - %w]%{$reset_color%}'
