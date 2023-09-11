@@ -30,5 +30,5 @@ ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[blue]%} ➦"
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[magenta]%} ✂"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[grey]%} ✱"
 
-PS1='%{$usercolor%}%n%{$systemgray%}@%{$systemcolor%}%m%{$systemgray%}:%{$pathcolor%}%~ %{$reset_color%}$(git_prompt_info)'
+PS1='%{$usercolor%}%n%{$systemgray%}@%{$systemcolor%}%m%{$systemgray%} in %{$pathcolor%}%~ %{$reset_color%}$(git_prompt_info)'
 RPROMPT=' %{$systemgray%}[%T - %w]%{$reset_color%}'
